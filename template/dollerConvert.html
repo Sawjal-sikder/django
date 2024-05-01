@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Convert</title>
+</head>
+<body>
+<h1>Convert Currency BDT To USD</h1>
+<form method="POST" action="{% url 'dollerConvert' %}" >
+    {% csrf_token %}
+    <input type="text" placeholder="Enter USD amount" name="usd" ><br><br>
+    <button type="submit" >Convert</button>
+</form>
+<p>USD Amount is : {{usd}}</p>
+<p>BDT Amount is : {{bdt}}</p>
+</body>
+</html>
